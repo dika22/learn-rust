@@ -1,1 +1,5 @@
-./hello_world/target/*
+hello_world/target/
+loop_example/target/
+return_example/target/
+condition_example/target/
+array_slice_tuple_vector_example/target/
