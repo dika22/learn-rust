@@ -1,18 +1,7 @@
-fn main() {
-    do_something();
-}
+mod borrowing_example;
+mod ownership_example;
 
-fn do_something() {
-    let mut k = String::from("hello");
-    let s = String::from("ini buku");
-    let r = &s; // borrow
-    {
-        let m = String::from("hello world");
-        let n = String::from("from rust");
-        k = n;
-        
-        println!("satu: {:?}", m);
-    }
-    println!("dari ownership: {}, di brorrow: {}", s, r); // ✔️ aman, cuma baca
-    println!("dua: {:?}", k);
+fn main() {
+    ownership_example::demonstrate_ownership();
+    borrowing_example::demonstrate_borrowing();
 }
